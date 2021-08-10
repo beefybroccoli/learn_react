@@ -1,0 +1,3 @@
+import {timesTwo}
+
+test("Multiplies ");
