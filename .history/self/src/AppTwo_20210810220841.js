@@ -171,7 +171,7 @@ function Component_Fetch_Data_With_API() {
   /**
   loading state
    */
-  if (load1ing) {
+  if (loading) {
     return (
       <div>
         <h3>Fetch Data with API</h3>
@@ -369,8 +369,9 @@ function Component_Form_2() {
   }); //end useState
 
   const onChange_input = (event) => {
+    
+
     // const pattern_text = "."; //wild card
-    const pattern_text = "^[a-zA-Z]+$";
     const regex = new RegExp(pattern_text);
 
     console.log([event.target.name], " = ", event.target.value);

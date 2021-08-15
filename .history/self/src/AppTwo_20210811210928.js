@@ -171,7 +171,7 @@ function Component_Fetch_Data_With_API() {
   /**
   loading state
    */
-  if (load1ing) {
+  if (loading) {
     return (
       <div>
         <h3>Fetch Data with API</h3>

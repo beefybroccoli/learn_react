@@ -171,7 +171,7 @@ function Component_Fetch_Data_With_API() {
   /**
   loading state
    */
-  if (load1ing) {
+  if (loading) {
     return (
       <div>
         <h3>Fetch Data with API</h3>
@@ -214,7 +214,7 @@ function Component_Fetch_Data_With_API() {
  * .....onChange event, update the slice of state values
  * There are three slices of states
  * @returns  form component
- */
+ *
 function Component_Form_1() {
   //first slice of state
   const [input_firstName, setFirstName] = useState("");
