@@ -9,12 +9,7 @@ import { UserProfile as CompUserProfile } from "./component/UserProfile";
 
 function App() {
   //a component for a Blog
-  const CompBlog_Object = {
-    pathname: "/blog",
-    search: "?name=john",
-    hash: "#theHash",
-    state: { from: "home page" },
-  };
+  const CompBlog_Object = 
   const CompBlog = (props) => {
     return <h3> Blog nobody reads</h3>;
   };
@@ -29,14 +24,19 @@ function App() {
           <Link to="/about">About</Link>
           <Link to="/dynamicrouting">Dynamic Routing</Link>
           <Link to="/userprofile">User Profile</Link>
-          <Link to={CompBlog_Object}>Blog</Link>
+
+          <Link
+            to={}
+          >
+            Blog
+          </Link>
 
           <Route path="/UserProfile" component={CompUserProfile} />
           <Route path="/DynamicRouting" component={CompDynamicRouting} />
           <Route path="/about" component={CompAbout} />
           <Route path="/contact" component={CompContact} />
           <Route exact path="/" component={CompHome} />
-          <Route path={CompBlog_Object.pathname} render={CompBlog()} />
+          <Route path="/blog" render={CompBlog()} />
         </BrowserRouter>
       </div>
     </div>

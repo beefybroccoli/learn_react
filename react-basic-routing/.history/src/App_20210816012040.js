@@ -29,14 +29,19 @@ function App() {
           <Link to="/about">About</Link>
           <Link to="/dynamicrouting">Dynamic Routing</Link>
           <Link to="/userprofile">User Profile</Link>
-          <Link to={CompBlog_Object}>Blog</Link>
+
+          <Link
+            to={}
+          >
+            Blog
+          </Link>
 
           <Route path="/UserProfile" component={CompUserProfile} />
           <Route path="/DynamicRouting" component={CompDynamicRouting} />
           <Route path="/about" component={CompAbout} />
           <Route path="/contact" component={CompContact} />
           <Route exact path="/" component={CompHome} />
-          <Route path={CompBlog_Object.pathname} render={CompBlog()} />
+          <Route path="/blog" render={CompBlog()} />
         </BrowserRouter>
       </div>
     </div>

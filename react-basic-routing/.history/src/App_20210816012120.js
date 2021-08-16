@@ -36,7 +36,7 @@ function App() {
           <Route path="/about" component={CompAbout} />
           <Route path="/contact" component={CompContact} />
           <Route exact path="/" component={CompHome} />
-          <Route path={CompBlog_Object.pathname} render={CompBlog()} />
+          <Route path={CompBlog_Object.bl} render={CompBlog()} />
         </BrowserRouter>
       </div>
     </div>
