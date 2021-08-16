@@ -2,8 +2,10 @@ import "./AppTwo.css";
 import React, { useState, useEffect, useReducer } from "react";
 import axios from "axios";
 import { string } from "prop-types";
-import { func_fetch_data, get_stateLoading } from "../src/asset/constant/
-function";
+import {
+  func_fetch_data,
+  get_stateLoading,
+} from "../src/asset/constant/function";
 
 function SecrectComponent() {
   return <p>secret key to the hashing algorithm</p>;
@@ -155,8 +157,6 @@ function Component_Light_On_and_Off() {
   );
 }
 
-
-
 function Component_Fetch_Data_From_API_With_Fetch() {
   const URL = "https://api.github.com/users/";
   const login = "beefybroccoli";
@@ -166,7 +166,7 @@ function Component_Fetch_Data_From_API_With_Fetch() {
   const [stateError, setError] = useState(null);
 
   console.log(get_stateLoading(stateLoading));
-    useEffect(() => {
+  useEffect(() => {
     setLoadingState(true);
     fetch(URL + login)
       .then((response) => response.json())
@@ -182,7 +182,7 @@ function Component_Fetch_Data_From_API_With_Fetch() {
       <p>{get_stateLoading(stateLoading)}</p>
       <p>{stateData ? "dateState has something" : "stateData = null"}</p>
       <p>{stateError ? stateError : "stateError = null"}</p>
-      <p> {stateData ? Object.keys(stateData) : "empty text"}</p>
+      <p> {stateData ? Object.entries(stateData) : "empty text"}</p>
     </div>
   );
 }
