@@ -23,7 +23,7 @@ function Contact(props) {
 function About(props) {
   return (
     <div>
-      <h1>About Page</h1>
+      <h1>About</h1>
       <p>This is about page</p>
     </div>
   );
