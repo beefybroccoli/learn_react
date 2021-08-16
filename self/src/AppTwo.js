@@ -2,6 +2,7 @@ import "./AppTwo.css";
 import React, { useState, useEffect, useReducer } from "react";
 import axios from "axios";
 import { string } from "prop-types";
+import { func_fetch_data } from "../src/asset/constant/function";
 
 function SecrectComponent() {
   return <p>secret key to the hashing algorithm</p>;
@@ -153,56 +154,100 @@ function Component_Light_On_and_Off() {
   );
 }
 
-function Component_Fetch_Data_With_API() {
+const get_stateLoading = (stateLoading) => {
+  if (stateLoading === null) {
+    console.log("case null, stateLoading = ", stateLoading);
+    return "null";
+  } else if (stateLoading === true) {
+    console.log("case true, stateLoading = ", stateLoading);
+    return "stateLoading = true";
+  } else if (stateLoading === false) {
+    console.log("case false, stateLoading = ", stateLoading);
+    return "stateLoading = false";
+  } else {
+    console.log("case unknown, stateLoading = ", stateLoading);
+    return "stateLoading = unknown";
+  }
+};
+
+function Component_Fetch_Data_From_API_With_Fetch() {
   const URL = "https://api.github.com/users/";
   const login = "beefybroccoli";
 
   const [stateData, setData] = useState(null);
-  const [stateLoading, setLoading] = useState(false);
+  const [stateLoading, setLoadingState] = useState(null);
   const [stateError, setError] = useState(null);
 
+  console.log(get_stateLoading(stateLoading));
+
+  const data_retreiver = func_fetch_data;
+
   useEffect(() => {
+    setLoadingState(true);
     fetch(URL + login)
       .then((response) => response.json())
-      .then(setData)
-      .then(() => setLoading(false))
-      .catch(setError);
+      .then((result) => setData(result))
+      .catch((error) => setError(error));
+    setLoadingState(false);
   }, []);
+
+  return (
+    <div>
+      <h3>Fetch Data from API with Fetch</h3>
+      <p>useEffect takes two arguments, a function and an array</p>
+      <p>{get_stateLoading(stateLoading)}</p>
+      <p>{stateData ? "dateState has something" : "stateData = null"}</p>
+      <p>{stateError ? stateError : "stateError = null"}</p>
+      <p> {stateData ? Object.keys(stateData) : "empty text"}</p>
+    </div>
+  );
+
+  // useEffect(() => {
+  //   fetch(URL + login)
+  //     .then((response) => response.json())
+  //     .then(setData)
+  //     .then(() => setLoading(false))
+  //     .catch(setError);
+  // }, []);
+
+  // useEffect(() => {
+  //   func_fetch_data(URL + login, setData, setLoading, setError);
+  // }, []);
 
   /**
   loading state
    */
-  if (stateLoading) {
-    return (
-      <div>
-        <h3>Fetch Data with API</h3>
-        <p>useEffect takes two arguments, a function and an array</p>
-        <p>Please wait while loading</p>
-      </div>
-    );
-  } else if (stateError) {
-    /**
-  error state
-   */
-    return (
-      <div>
-        <h3>Fetch Data with API</h3>
-        <p>useEffect takes two arguments, a function and an array</p>
-        <p>{stateError}</p>
-      </div>
-    );
-  } else {
-    /**
-  final state after data successfully loaded.
-  */
-    return (
-      <div>
-        <h3>Fetch Data with API</h3>
-        <p>useEffect takes two arguments, a function and an array</p>
-        <p>{stateData ? JSON.stringify(stateData) : "No Data Available"}</p>
-      </div>
-    );
-  }
+  // if (stateLoading) {
+  //   return (
+  //     <div>
+  //       <h3>Fetch Data with API</h3>
+  //       <p>useEffect takes two arguments, a function and an array</p>
+  //       <p>Please wait while loading</p>
+  //     </div>
+  //   );
+  // } else if (stateError) {
+  //   /**
+  // error state
+  //  */
+  //   return (
+  //     <div>
+  //       <h3>Fetch Data with API</h3>
+  //       <p>useEffect takes two arguments, a function and an array</p>
+  //       <p>{stateError}</p>
+  //     </div>
+  //   );
+  // } else if (stateLoading === false) {
+  //   /**
+  // final state after data successfully loaded.
+  // */
+  //   return (
+  //     <div>
+  //       <h3>Fetch Data with API</h3>
+  //       <p>useEffect takes two arguments, a function and an array</p>
+  //       <p>{stateData}</p>
+  //     </div>
+  //   );
+  // }
 }
 
 /**
@@ -454,7 +499,7 @@ function AppTwo(props) {
       <UseState_UseEffect_In_React />
       <UseReducer_In_React />
       <Component_Light_On_and_Off />
-      <Component_Fetch_Data_With_API />
+      <Component_Fetch_Data_From_API_With_Fetch />
       <FooterComponent />
       <Component_Form_1 />
       <Component_Form_AJax_Submit />
