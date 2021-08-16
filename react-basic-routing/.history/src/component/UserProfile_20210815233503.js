@@ -1,0 +1,29 @@
+import React from "react";
+import ReactDom from "react-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+
+export function UserProfile(props) {
+
+    const users=[
+        {id:1,name:'aaa1'},
+        {id:1,name:'aaa1'},
+        {id:1,name:'aaa1'},
+    ]
+
+  return (
+    <div>
+      <h2>User Profile Page</h2>
+      <BrowserRouter>
+        <Link to="/users/1">User 1</Link>
+        <Link to="/users/2">User 2</Link>
+        <Link to="/users/3">User 3</Link>
+
+        <Route path='/userprofile/users/:id' render={props => {
+            const {id}= props.match.params;
+            const user =users.find(usr=> usr.id==id);
+            return <p>username = The name is {user.name}</p>;
+        }}
+      </BrowserRouter>
+    </div>
+  );
+}
