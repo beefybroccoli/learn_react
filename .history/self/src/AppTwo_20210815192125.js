@@ -139,17 +139,17 @@ function Component_Light_On_and_Off() {
   const [currentState, cb_setLight] = useState(false);
 
   return (
-    <div>
+    <section>
       <h3>Turn light bulb on and off</h3>
-      <picture onClick={() => cb_setLight(!currentState)}>
-        <img
-          src={currentState === false ? white : yellow}
-          width={100}
-          height={100}
-          alt="some text"
-        />
-      </picture>
-    </div>
+      <div onClick={() => cb_setLight(!currentState)}>
+        <img src={} width={100} height={100} alt="some text" />
+        {currentState === false ? (
+          <img src={white} width={100} height={100} alt="some text" />
+        ) : (
+          <img src={yellow} width={100} height={100} alt="some text" />
+        )}
+      </div>
+    </section>
   );
 }
 

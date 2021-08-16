@@ -139,17 +139,16 @@ function Component_Light_On_and_Off() {
   const [currentState, cb_setLight] = useState(false);
 
   return (
-    <div>
+    <section>
       <h3>Turn light bulb on and off</h3>
-      <picture onClick={() => cb_setLight(!currentState)}>
-        <img
-          src={currentState === false ? white : yellow}
-          width={100}
-          height={100}
-          alt="some text"
-        />
-      </picture>
-    </div>
+      <div onClick={() => cb_setLight(!currentState)}>
+        {currentState === false ? (
+          <img src={white} width={100} height={100} />
+        ) : (
+          <img src={yellow} width={100} height={100} />
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -159,7 +158,7 @@ function Component_Fetch_Data_With_API() {
 
   const [stateData, setData] = useState(null);
   const [stateLoading, setLoading] = useState(false);
-  const [stateError, setError] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch(URL + login)
@@ -172,7 +171,7 @@ function Component_Fetch_Data_With_API() {
   /**
   loading state
    */
-  if (stateLoading) {
+  if (load1ing) {
     return (
       <div>
         <h3>Fetch Data with API</h3>
@@ -180,7 +179,7 @@ function Component_Fetch_Data_With_API() {
         <p>Please wait while loading</p>
       </div>
     );
-  } else if (stateError) {
+  } else if (error) {
     /**
   error state
    */
@@ -188,7 +187,7 @@ function Component_Fetch_Data_With_API() {
       <div>
         <h3>Fetch Data with API</h3>
         <p>useEffect takes two arguments, a function and an array</p>
-        <p>{stateError}</p>
+        <p>{error}</p>
       </div>
     );
   } else {
