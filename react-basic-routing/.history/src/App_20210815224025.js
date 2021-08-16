@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
-import { Home as CompHome } from "../src/component/Home";
+import { Home as CompHome } from "../src/component/H";
 import { About as CompAbout } from "../src/component/About";
 import { Contact as CompContact } from "../src/component/Contact";
 

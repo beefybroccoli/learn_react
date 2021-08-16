@@ -1,9 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
-import { Home as CompHome } from "../src/component/Home";
-import { About as CompAbout } from "../src/component/About";
-import { Contact as CompContact } from "../src/component/Contact";
+
+
+
+
+function About(props) {
+  return (
+    <div>
+      <h1>About Page</h1>
+      <p>This is about page</p>
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -15,9 +24,10 @@ function App() {
           <Link to="/contact">Contact</Link>
           <Link to="/about">About</Link>
           <Link to="/">Home</Link>
-          <Route path="/about" component={CompAbout} />
-          <Route path="/contact" component={CompContact} />
-          <Route exact path="/" component={CompHome} />
+
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route exact path="/" component={Home} />
         </BrowserRouter>
       </header>
     </div>

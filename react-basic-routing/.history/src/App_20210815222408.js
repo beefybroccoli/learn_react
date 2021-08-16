@@ -1,11 +1,16 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
-import { Home as CompHome } from "../src/component/Home";
-import { About as CompAbout } from "../src/component/About";
-import { Contact as CompContact } from "../src/component/Contact";
+import Home from "../component/Home";
+import About from "../component/About";
+import Contact from "../component/Contact";
 
 function App() {
+
+  const Home = Home;
+  const About = About;
+  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,9 +20,10 @@ function App() {
           <Link to="/contact">Contact</Link>
           <Link to="/about">About</Link>
           <Link to="/">Home</Link>
-          <Route path="/about" component={CompAbout} />
-          <Route path="/contact" component={CompContact} />
-          <Route exact path="/" component={CompHome} />
+
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route exact path="/" component={Home} />
         </BrowserRouter>
       </header>
     </div>
