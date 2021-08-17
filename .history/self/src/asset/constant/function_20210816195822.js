@@ -12,9 +12,9 @@ export function func_fetch_data(
     fetch(API_URL)
       .then((response) => cb_setData(response))
       .catch((error) => cb_setError(error));
-  }catch(){
+  }catch()
 
-  }  finally{
+  finally{
 
     cb_setLoadingState(false);
   }

@@ -9,15 +9,12 @@ export function func_fetch_data(
 
   cb_setData("(sample data)");
   try{
-    fetch(API_URL)
-      .then((response) => cb_setData(response))
-      .catch((error) => cb_setError(error));
-  }catch(){
+  fetch(API_URL)
+    .then((response) => cb_setData(response))
+    .catch((error) => cb_setError(error));
+  }catch()
 
-  }  finally{
-
-    cb_setLoadingState(false);
-  }
+  cb_setLoadingState(false);
 }
 
 export function get_stateLoading(stateLoading) {

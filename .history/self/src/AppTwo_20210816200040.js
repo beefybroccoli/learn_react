@@ -165,9 +165,7 @@ function Component_Fetch_Data_From_API_With_Fetch() {
   const [stateLoading, setLoadingState] = useState(null);
   const [stateError, setError] = useState(null);
 
-  const retriver = func_fetch_data;
-
-  // useEffect(() => retriver(stateData, setData, setLoadingState, setError), []);
+  const retriver = func_fetch_data
 
   console.log(get_stateLoading(stateLoading));
   useEffect(() => {
