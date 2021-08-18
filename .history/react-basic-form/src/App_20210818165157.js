@@ -2,14 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import * as yup from "yup";
 
-const schema = yup.object().shape({
-  user: yup.string().required("user is required"),
-  star: yup.string().oneOf(["startrek", "starwars"]),
-  language: yup
-    .string()
-    .oneOf(["javascript", "python"], "you must choose a language"),
-  agree: yup.boolean().oneOf([true], "you must click on agree button"),
-});
+const schema = yup.object().shape()
 
 function App() {
   const default_state = {

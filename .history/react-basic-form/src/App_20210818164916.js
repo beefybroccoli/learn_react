@@ -1,15 +1,5 @@
 import "./App.css";
 import React, { useState } from "react";
-import * as yup from "yup";
-
-const schema = yup.object().shape({
-  user: yup.string().required("user is required"),
-  star: yup.string().oneOf(["startrek", "starwars"]),
-  language: yup
-    .string()
-    .oneOf(["javascript", "python"], "you must choose a language"),
-  agree: yup.boolean().oneOf([true], "you must click on agree button"),
-});
 
 function App() {
   const default_state = {
@@ -19,7 +9,6 @@ function App() {
     select_role: "Junior Dev",
     input_checkbox_vacation: "no",
     input_checkbox_language: "",
-    button_disabled: true,
   };
 
   const [formData, set_formData] = useState(default_state);
@@ -168,9 +157,7 @@ function App() {
           </label>
           <br />
           <br />
-          <button onClick={cb_onSubmit} disabled={formData.button_disabled}>
-            Submit
-          </button>
+          <button onClick={cb_onSubmit} disabled={formData.disabled}>Submit</button>
         </form>
       </main>
     </div>

@@ -8,7 +8,7 @@ const schema = yup.object().shape({
   language: yup
     .string()
     .oneOf(["javascript", "python"], "you must choose a language"),
-  agree: yup.boolean().oneOf([true], "you must click on agree button"),
+  agree: yup
 });
 
 function App() {
