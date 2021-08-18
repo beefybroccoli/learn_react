@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-  const [formData, set_formData] = useState({
+  const [formData, setState] = useState({
     input_text_firstName: "",
     input_text_lastName: "",
     input_text_email: "",
@@ -26,9 +26,8 @@ function App() {
     // }
     const var_key = event.target.name + "";
     const var_value = event.target.value;
-    console.log("var_key = ", var_key, " var_value = ", var_value);
-
-    set_formData({ ...formData, var_key: var_value });
+    console.log("var")
+    setState({ ...formData, var_key: var_value });
     console.log(formData);
   };
 

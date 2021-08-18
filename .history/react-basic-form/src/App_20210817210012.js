@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-  const [formData, set_formData] = useState({
+  const [formData, setState] = useState({
     input_text_firstName: "",
     input_text_lastName: "",
     input_text_email: "",
@@ -13,23 +13,17 @@ function App() {
   const cb_onChange = (event) => {
     // debugger;
     // console.log(event)
-    // if ((event.target.name = "input_text_firstName")) {
-    //   console.log("case first event.target.value = ", event.target.value);
-    // } else if ((event.target.name = "input_text_lastName")) {
-    //   console.log("case last event.target.value = ", event.target.value);
-    // } else if ((event.target.name = "input_text_email")) {
-    //   console.log("case email event.target.value = ", event.target.value);
-    // } else if ((event.target.name = "select_role")) {
-    //   console.log("case role event.target.value = ", event.target.value);
-    // } else if ((event.target.name = "input_checkbox")) {
-    //   console.log("case vacation event.target.value = ", event.target.value);
-    // }
-    const var_key = event.target.name + "";
-    const var_value = event.target.value;
-    console.log("var_key = ", var_key, " var_value = ", var_value);
+    if ((event.target.name = "input_text_firstName")) {
+    }
 
-    set_formData({ ...formData, var_key: var_value });
-    console.log(formData);
+    if ((event.target.name = "input_text_lastName")) {
+    }
+
+    if ((event.target.name = "input_text_email")) {
+    }
+
+    if ((event.target.name = "")) {
+    }
   };
 
   const cb_onSubmit = (event) => {
@@ -79,12 +73,7 @@ function App() {
           </label>
           <label>
             Role:
-            <select
-              id="select_role"
-              name="select_role"
-              value="Junior Dev"
-              onChange={cb_onChange}
-            >
+            <select id="select_role" name="select_role" onChange={cb_onChange}>
               <option value="Junior Dev"> Junior Dev </option>
               <option value="Senior Dev"> Senior Dev </option>
               <option value="Manager"> Manager </option>
