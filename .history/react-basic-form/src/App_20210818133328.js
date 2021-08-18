@@ -110,8 +110,6 @@ function App() {
               <option value="IT">IT</option>
             </select>
           </label>
-          <br />
-          <br />
           <label>
             On Vacation:
             <input
@@ -123,14 +121,7 @@ function App() {
               onChange={cb_onChange}
             />
           </label>
-          <label>
-            Python
-            <input type="radio" />
-          </label>
-          <label>
-            JavaScript
-            <input type="radio" />
-          </label>
+          
           <button onClick={cb_onSubmit}>Submit</button>
         </form>
       </main>

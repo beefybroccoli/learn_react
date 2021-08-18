@@ -111,7 +111,6 @@ function App() {
             </select>
           </label>
           <br />
-          <br />
           <label>
             On Vacation:
             <input

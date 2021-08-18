@@ -110,8 +110,6 @@ function App() {
               <option value="IT">IT</option>
             </select>
           </label>
-          <br />
-          <br />
           <label>
             On Vacation:
             <input
