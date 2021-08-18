@@ -27,22 +27,20 @@ function App() {
     // } else if ((event.target.name = "input_checkbox")) {
     //   console.log("case vacation event.target.value = ", event.target.value);
     // }
+    const var_key = event.target.name;
+    const var_value = event.target.value;
+    console.log("var_key = ", var_key, ", var_value = ", var_value);
+    // debugger;
+    if (event.target.name === "input_checkbox_vacation") {
+      const var_checked = event.target.checked ? "yes" : "no";
+      set_formData({ ...formData, [var_key]: var_checked });
+    } else {
+      set_formData({ ...formData, [var_key]: var_value });
+    }
 
-    //---------------------------------------------------------------
-    // const var_key = event.target.name;
-    // const var_value = event.target.value;
-    // console.log("var_key = ", var_key, ", var_value = ", var_value);
-    // // debugger;
-    // if (event.target.name === "input_checkbox_vacation") {
-    //   const var_checked = event.target.checked ? "yes" : "no";
-    //   set_formData({ ...formData, [var_key]: var_checked });
-    // } else {
-    //   set_formData({ ...formData, [var_key]: var_value });
-    // }
-    //---------------------------------------------------------------
-    const { checked, value, name, type } = event.target;
-    const valueToUse = type === "checkbox" ? checked : value;
-    set_formData({ ...formData, [name]: valueToUse });
+    const { checked, vallue, name, type } = event.target;
+    const valueToUse = (type =)
+
   };
 
   const cb_resetForm = () => {
@@ -123,8 +121,8 @@ function App() {
             On Vacation:
             <input
               type="checkbox"
-              id="input_checkbox_vacation"
-              name="input_checkbox_vacation"
+              id="input_checkbox"
+              name="input_checkbox"
               defaultChecked={false}
               value={formData.input_checkbox_vacation}
               onChange={cb_onChange}
@@ -135,11 +133,9 @@ function App() {
           <label>
             Python
             <input
-              name="input_checkbox_language"
-              id="input_checkbox_language"
               onChange={cb_onChange}
               type="radio"
-              value="python"
+              value="Python"
               checked={formData.input_checkbox_language === "python"}
             />
           </label>
@@ -147,11 +143,9 @@ function App() {
           <label>
             JavaScript
             <input
-              name="input_checkbox_language"
-              id="input_checkbox_language"
               onChange={cb_onChange}
               type="radio"
-              value="javascript"
+              value="JavaScript"
               checked={formData.input_checkbox_language === "javascript"}
             />
           </label>

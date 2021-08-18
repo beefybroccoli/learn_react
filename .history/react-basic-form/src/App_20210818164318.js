@@ -29,8 +29,8 @@ function App() {
     // }
 
     //---------------------------------------------------------------
-    // const var_key = event.target.name;
-    // const var_value = event.target.value;
+    const var_key = event.target.name;
+    const var_value = event.target.value;
     // console.log("var_key = ", var_key, ", var_value = ", var_value);
     // // debugger;
     // if (event.target.name === "input_checkbox_vacation") {
@@ -123,8 +123,8 @@ function App() {
             On Vacation:
             <input
               type="checkbox"
-              id="input_checkbox_vacation"
-              name="input_checkbox_vacation"
+              id="input_checkbox"
+              name="input_checkbox"
               defaultChecked={false}
               value={formData.input_checkbox_vacation}
               onChange={cb_onChange}
@@ -135,8 +135,6 @@ function App() {
           <label>
             Python
             <input
-              name="input_checkbox_language"
-              id="input_checkbox_language"
               onChange={cb_onChange}
               type="radio"
               value="python"
@@ -147,8 +145,6 @@ function App() {
           <label>
             JavaScript
             <input
-              name="input_checkbox_language"
-              id="input_checkbox_language"
               onChange={cb_onChange}
               type="radio"
               value="javascript"

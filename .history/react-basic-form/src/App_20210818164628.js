@@ -135,8 +135,6 @@ function App() {
           <label>
             Python
             <input
-              name="input_checkbox_language"
-              id="input_checkbox_language"
               onChange={cb_onChange}
               type="radio"
               value="python"
@@ -147,8 +145,6 @@ function App() {
           <label>
             JavaScript
             <input
-              name="input_checkbox_language"
-              id="input_checkbox_language"
               onChange={cb_onChange}
               type="radio"
               value="javascript"
