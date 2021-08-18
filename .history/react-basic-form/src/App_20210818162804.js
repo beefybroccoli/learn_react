@@ -143,8 +143,6 @@ function App() {
               checked={formData.input_checkbox_language === "javascript"}
             />
           </label>
-          <br />
-          <br />
           <button onClick={cb_onSubmit}>Submit</button>
         </form>
       </main>

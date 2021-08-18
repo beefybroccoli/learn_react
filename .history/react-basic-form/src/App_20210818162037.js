@@ -7,8 +7,7 @@ function App() {
     input_text_lastName: "",
     input_text_email: "",
     select_role: "Junior Dev",
-    input_checkbox_vacation: "no",
-    input_checkbox_language: "python",
+    input_checkbox: "no",
   };
 
   const [formData, set_formData] = useState(default_state);
@@ -120,31 +119,22 @@ function App() {
               id="input_checkbox"
               name="input_checkbox"
               defaultChecked={false}
-              value={formData.input_checkbox_vacation}
+              value={formData.input_checkbox}
               onChange={cb_onChange}
             />
           </label>
-          <br />
-          <br />
           <label>
             Python
-            <input
-              type="radio"
-              value="Python"
-              checked={formData.input_checkbox_language === "python"}
-            />
+            <input type="radio" value="Python" />
           </label>
-
+          <label>
+            Python
+            <input type="radio" value="Python" />
+          </label>
           <label>
             JavaScript
-            <input
-              type="radio"
-              value="JavaScript"
-              checked={formData.input_checkbox_language === "javascript"}
-            />
+            <input type="radio" />
           </label>
-          <br />
-          <br />
           <button onClick={cb_onSubmit}>Submit</button>
         </form>
       </main>
