@@ -41,25 +41,15 @@ function App() {
             />
           </label>
           <label>
-            Role:
-            <select id="select_role" name="select_role" value="Senior Dev">
-              <option value="Junior Dev"> Junior Dev </option>
-              <option value="Senior Dev"> Senior Dev </option>
-              <option value="Manager"> Manager </option>
-              <option value="Sales"> Sales </option>
-              <option value="IT">IT</option>
-            </select>
-          </label>
-          <label>
-            On Vacation:
+            First Name:
             <input
-              type="checkbox"
-              id="input_checkbox"
-              name="input_checkbox"
-              value="no"
+              maxLength="50"
+              placeholder="(role)"
+              id="input_text_role"
+              name="input_text_role"
+              type="text"
             />
           </label>
-          <button>Submit</button>
         </form>
       </main>
     </div>

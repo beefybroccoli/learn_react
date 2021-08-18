@@ -42,7 +42,7 @@ function App() {
           </label>
           <label>
             Role:
-            <select id="select_role" name="select_role" value="Senior Dev">
+            <select id=>
               <option value="Junior Dev"> Junior Dev </option>
               <option value="Senior Dev"> Senior Dev </option>
               <option value="Manager"> Manager </option>
@@ -52,12 +52,7 @@ function App() {
           </label>
           <label>
             On Vacation:
-            <input
-              type="checkbox"
-              id="input_checkbox"
-              name="input_checkbox"
-              value="no"
-            />
+            <input type="checkbox" id="input_checkbox" />
           </label>
           <button>Submit</button>
         </form>

@@ -13,7 +13,7 @@ function App() {
           <label>
             First Name:
             <input
-              maxLength="50"
+              maxLength="5"
               placeholder="(First Name)"
               id="input_text_firstName"
               name="input_text_firstName"
@@ -23,7 +23,7 @@ function App() {
           <label>
             Last Name:
             <input
-              maxLength="50"
+              maxLength="5"
               placeholder="(Last Name)"
               id="input_text_lastName"
               name="input_text_lastName"
@@ -33,33 +33,23 @@ function App() {
           <label>
             Email:
             <input
-              maxLength="50"
+              maxLength="5"
               placeholder="(email)"
               id="input_text_email"
-              name="input_text_email"
+              name="input_text_firstName"
               type="text"
             />
           </label>
           <label>
-            Role:
-            <select id="select_role" name="select_role" value="Senior Dev">
-              <option value="Junior Dev"> Junior Dev </option>
-              <option value="Senior Dev"> Senior Dev </option>
-              <option value="Manager"> Manager </option>
-              <option value="Sales"> Sales </option>
-              <option value="IT">IT</option>
-            </select>
-          </label>
-          <label>
-            On Vacation:
+            First Name:
             <input
-              type="checkbox"
-              id="input_checkbox"
-              name="input_checkbox"
-              value="no"
+              maxLength="5"
+              placeholder="(First Name)"
+              id="input_text_firstName"
+              name="input_text_firstName"
+              type="text"
             />
           </label>
-          <button>Submit</button>
         </form>
       </main>
     </div>

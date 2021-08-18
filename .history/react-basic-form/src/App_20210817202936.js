@@ -42,7 +42,7 @@ function App() {
           </label>
           <label>
             Role:
-            <select id="select_role" name="select_role" value="Senior Dev">
+            <select id="select_role" name="select_role" value="Se">
               <option value="Junior Dev"> Junior Dev </option>
               <option value="Senior Dev"> Senior Dev </option>
               <option value="Manager"> Manager </option>
