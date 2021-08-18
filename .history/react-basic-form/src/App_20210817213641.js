@@ -2,15 +2,13 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-  const default_state = {
+  const [formData, set_formData] = useState({
     input_text_firstName: "",
     input_text_lastName: "",
     input_text_email: "",
     select_role: "Junior Dev",
     input_checkbox: "no",
-  };
-
-  const [formData, set_formData] = useState(default_state);
+  });
 
   const cb_onChange = (event) => {
     // debugger;
@@ -29,7 +27,7 @@ function App() {
     const var_key = event.target.name;
     const var_value = event.target.value;
     console.log("var_key = ", var_key, ", var_value = ", var_value);
-    // debugger;
+    debugger;
     if (event.target.name === "input_checkbox") {
       const var_checked = event.target.checked ? "yes" : "no";
       set_formData({ ...formData, [var_key]: var_checked });
@@ -38,17 +36,8 @@ function App() {
     }
   };
 
-  const cb_resetForm = () => {
-    set_formData(default_state);
-    //???????????????????????????????????????????????????????
-    //?? How do I reset checkBox to unchecked? ??????????????
-    //???????????????????????????????????????????????????????
-  };
-
   const cb_onSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
-    cb_resetForm();
   };
 
   return (
@@ -116,12 +105,11 @@ function App() {
               type="checkbox"
               id="input_checkbox"
               name="input_checkbox"
-              defaultChecked={false}
               value={formData.input_checkbox}
               onChange={cb_onChange}
             />
           </label>
-          <button onClick={cb_onSubmit}>Submit</button>
+          <button>Submit</button>
         </form>
       </main>
     </div>
