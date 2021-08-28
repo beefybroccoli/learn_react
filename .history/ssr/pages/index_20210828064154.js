@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import Card from "./Card";
-import data from "../data/data.json";
+import data from "../data/data"
 
 export default () => {
   return (
