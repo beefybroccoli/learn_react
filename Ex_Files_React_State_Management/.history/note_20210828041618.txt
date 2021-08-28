@@ -1,0 +1,11 @@
+Various options for state management:
+_flux
+_reflux
+_flummox
+_redux
+_alt
+_MartyJS?
+
+Redux emphasize
+_immutability
+_on

@@ -1,0 +1,14 @@
+Various options for state management:
+_flux
+_reflux
+_flummox
+_redux
+_alt
+_MartyJS?
+_Mobx
+
+Redux emphasize
+_immutability
+_one way data flow
+
+Presentation Logic vs Business Logic

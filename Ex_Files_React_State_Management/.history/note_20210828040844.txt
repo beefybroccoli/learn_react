@@ -1,0 +1,4 @@
+Various options for state management:
+_flux
+_reflux
+_flu
