@@ -1,4 +1,4 @@
-Steps to pass Global_Data from Provider to Consumer
+Steps to pass 
 1. Create a Context object
     i.e. const Context_Provider = React.createContext();
 

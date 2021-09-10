@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NewSingle from "./NewSingle";
 import Error from "./Error";
-
+import { Consumer } from "../App";
 
 class News extends Component {
   constructor(props) {

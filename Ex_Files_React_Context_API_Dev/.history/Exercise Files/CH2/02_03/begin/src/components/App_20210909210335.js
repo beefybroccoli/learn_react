@@ -1,24 +1,24 @@
-import React, { Component } from "react";
-import "./App.css";
-import News from "./News/News";
+import React, { Component } from 'react';
+import './App.css';
+import News from './News/News';
 
 const GlobalData = {
-  firstName: "Manny",
-  lastName: "Henri",
-  data: "This is some data",
+  firstName: 'Manny',
+  lastName: 'Henri',
+  data: 'This is some data',
 };
 
 const Context_API = React.createContext();
 
-export const Consumer = GlobalData.Consumer;
+export const 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       news: {
-        type: "everything",
-        query: "domains=techcrunch.com&language=en",
+        type: 'everything',
+        query: 'domains=techcrunch.com&language=en'
       },
     };
   }
@@ -30,9 +30,7 @@ class App extends Component {
           <div className="navbar-fixed">
             <nav>
               <div className="nav-wrapper indigo lighten-4">
-                <a href="/" className="bran-logo center">
-                  My Feed
-                </a>
+                <a href="/" className="bran-logo center">My Feed</a>
               </div>
             </nav>
           </div>

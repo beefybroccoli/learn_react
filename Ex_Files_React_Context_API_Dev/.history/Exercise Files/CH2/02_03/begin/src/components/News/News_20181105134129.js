@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import NewSingle from "./NewSingle";
-import Error from "./Error";
-
+import React, { Component } from 'react';
+import NewSingle from './NewSingle';
+import Error from './Error';
 
 class News extends Component {
   constructor(props) {
@@ -21,13 +20,13 @@ class News extends Component {
       })
       .then((data) => {
         this.setState({
-          news: data.articles,
-        });
+          news: data.articles
+        })
       })
       .catch((error) => {
         this.setState({
-          error: true,
-        });
+          error: true
+        })
       });
   }
 
@@ -37,12 +36,16 @@ class News extends Component {
         <NewSingle key={item.url} item={item} />
       ));
     } else {
-      return <Error />;
+      return <Error />
     }
   }
 
   render() {
-    return <div className="row">{this.renderItems()}</div>;
+    return (
+      <div className="row">
+        {this.renderItems()}
+      </div>
+    );
   }
 }
 

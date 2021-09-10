@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import News from "./News/News";
+import {Comsumer}
 
 const GlobalData = {
   firstName: "Manny",

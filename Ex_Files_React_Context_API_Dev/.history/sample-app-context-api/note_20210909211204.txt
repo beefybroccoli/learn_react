@@ -1,0 +1,27 @@
+Steps
+1. Create a Context object
+    i.e. const Context_API = React.createContext();
+
+2. Wrap the consumer within the Context object and Provider
+    i.e.
+        <Context_API.Provider value={GlobalData}>
+            <div>
+                <h2>Context API</h2>
+            </div>
+        </Context_API.Provider>
+
+3. Export consumer object
+    i.e. export const Context_Consumer = GlobalData.Consumer;
+
+4. Consumers Consumers
+
+    i.e.
+        import {Context_Consumer} from "../App.js"
+    <Context_Consumer>
+    {
+        (firstName) => ( 
+            
+
+        )//end function
+    }//end bracelet
+    <Context_Consumer>
