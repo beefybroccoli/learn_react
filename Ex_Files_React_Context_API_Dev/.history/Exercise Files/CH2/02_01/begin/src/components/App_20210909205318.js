@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import News from "./News/News";
 
-const UserData = {
-  firstName: "Manny",
-  lastName: "Henri",
-  data: "This is some data",
+const user = {
+  firstName: "Sam",
+  lastName: "Chan",
+  date: "(shared data)",
 };
 
+//create a 
 const Context_API_Data = React.createContext();
 
 class App extends Component {
@@ -23,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <Context_API_Data.Provider value={UserData}>
+      <Context_API_Data>
         <div className="containwer-fluid">
           <div className="navbar-fixed">
             <nav>
@@ -40,7 +41,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-      </Context_API_Data.Provider>
+      </Context_API_Data>
     );
   }
 }

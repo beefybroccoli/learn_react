@@ -23,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <Context_API_Data.Provider value={UserData}>
+      <Context_API_Data>
         <div className="containwer-fluid">
           <div className="navbar-fixed">
             <nav>
@@ -40,7 +40,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-      </Context_API_Data.Provider>
+      </Context_API_Data>
     );
   }
 }

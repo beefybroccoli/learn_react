@@ -1,0 +1,13 @@
+Steps
+1. Create a Context object
+    i.e. const Context_API_Data = React.createContext();
+
+2. Wrap the consumer within the Context object
+    i.e.
+        <Context_API_Data.Provider value={}>
+            <div>
+                <h2>Context API</h2>
+            </div>
+        </Context_API_Data.Provider>
+
+3. Create provider

@@ -1,0 +1,3 @@
+Steps
+1. Create a Context object
+    i.e. const Context_API_Data = React.createContext();

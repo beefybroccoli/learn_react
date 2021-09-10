@@ -1,0 +1,5 @@
+Steps
+1. Create a Context object
+    i.e. const Context_API_Data = React.createContext();
+
+2. Wrap the consumer within the Context object
