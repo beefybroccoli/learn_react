@@ -20,8 +20,8 @@ Steps to pass Global_Data from Provider to Consumer
 
     i.e.
     //in news.js, (consumer js file)
-    import {Consumer_Context_Consumer} from "../App.js"
-    <Consumer_Context_Consumer>
+    import {Context_Consumer} from "../App.js"
+    <Context_Consumer>
     {
         ({firstName}) => ( 
             <div>
@@ -30,7 +30,7 @@ Steps to pass Global_Data from Provider to Consumer
 
         )//end function
     }//end bracelet
-    <Consumer_Context_Consumer>
+    <Context_Consumer>
 
 situation 1a (rerender both all Consumers when the Provider rerender)
     //when the Provider re-render, the Consumer(s) will rerender as well
