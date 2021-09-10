@@ -16,7 +16,7 @@ export default function CharacterList(props) {
       .then((res) => {
         // console.log("res = ", res);
         console.log("res.data.results = ", res.data.results);
-        set_stateData(res.data.results);
+        set_stateData(res.data);
       })
       .catch((error) => {
         set_stateError(error);
