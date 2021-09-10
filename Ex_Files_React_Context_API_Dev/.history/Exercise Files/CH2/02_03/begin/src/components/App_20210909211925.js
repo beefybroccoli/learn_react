@@ -10,7 +10,7 @@ const GlobalData = {
 
 const Context_API = React.createContext();
 
-const cb_toggle_name = () => {};
+const 
 
 export const Consumer = GlobalData.Consumer;
 

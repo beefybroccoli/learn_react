@@ -32,12 +32,10 @@ Steps to pass Global_Data from Provider to Consumer
     }//end bracelet
     <Context_Consumer>
 
-situation 1a (rerender both all Consumers when the Provider rerender)
+situation 1a (rerender both all Consumers when the provider )
     //when the Provider re-render, the Consumer(s) will rerender as well
     <Context_Provider.Provider value={{name:"tom"}}>
 
-situation 1b (rerender only the Provider)
+situation 1b 
     //when the Provider re-render, the consumers WON'T rerender;thus, only the Provider rerender
     <Context_Provider.Provider value={object}>
-
-situation 2 - consume multiple contexts
