@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Vehicles from "./vehicles";
 import Species from "./species";
-import Homeworld from "./homeworld";
+import Hm
 import Films from "./films";
 import Starships from "./starships";
 

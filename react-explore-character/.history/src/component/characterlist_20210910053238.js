@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { URL_API } from "../constant/constant";
-import Character from "./character";
+import Character from "./character.js";
 
 export default function CharacterList(props) {
   const [stateData, set_stateData] = useState(null);

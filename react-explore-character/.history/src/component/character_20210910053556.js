@@ -121,7 +121,7 @@ export default function Character(props) {
             <Vehicles input_object={vehicles} />
           )}
           {Array.from(starships).length > 0 && (
-            <Starships input_object={starships} />
+            <Starship input_object={starships} />
           )}
         </Right_Div>
       </Body_Div>

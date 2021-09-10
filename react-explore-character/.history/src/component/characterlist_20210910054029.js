@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { URL_API } from "../constant/constant";
+import { URL_API } from "../constant/"
 import Character from "./character";
 
 export default function CharacterList(props) {

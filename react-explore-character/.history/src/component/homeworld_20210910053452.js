@@ -8,7 +8,7 @@ import styled from "styled-components";
   [] - The components must be styled with 
  */
 
-export default function Specie(props) {
+export default function Homeworld(props) {
   const [stateData, set_stateData] = useState(null);
   const [stateLoading, set_stateLoading] = useState(true);
   const [stateError, set_stateError] = useState(null);
@@ -51,19 +51,14 @@ export default function Specie(props) {
     return (
       <>
         <Header_Div></Header_Div>
-        <Body_Div>
-          {stateData &&
-            Array.from(stateData).map((element, index) => {
-              return <p key={index}>{element}</p>;
-            })}
-        </Body_Div>
+        <Body_Div>{stateData && <p>{stateData}</p>}</Body_Div>
       </>
     );
   };
 
   return (
     <Container_Div onClick={cb_onClick}>
-      <h3>Species</h3>
+      <h3>Homeworld</h3>
       {stateLoading && <p>Loading</p>}
       {stateError && <p>${stateError}</p>}
       {stateData && helper_create()}
