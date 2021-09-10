@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NewSingle from './NewSingle';
 import Error from './Error';
-import { Consumer_Context_Theme } from '../App';
+import { ThemeConsumer } from '../App';
 
 class News extends Component {
   constructor(props) {
@@ -34,13 +34,13 @@ class News extends Component {
   renderItems() {
     if (!this.state.error) {
       return this.state.news.map((item) => (
-        <Consumer_Context_Theme>
+        <ThemeConsumer>
           {({ styles }) => (
             <div style={styles}>
               <NewSingle key={item.url} item={item} />
             </div>
           )}
-        </Consumer_Context_Theme>
+        </ThemeConsumer>
       ));
     } else {
       return <Error />

@@ -1,0 +1,47 @@
+Steps to pass Global_Data from Provider to Consumer
+1. Create a Context object
+    i.e. const Context_Provider = React.createContext();
+
+2. Wrap the consumer within the Context object and Provider
+    i.e.
+        //in App.js
+        <Context_Provider.Provider value={GlobalData}>
+            <div>
+                <h2>Context API</h2>
+            </div>
+        </Context_Provider.Provider>
+
+3. Export consumer object
+    i.e. 
+    //in App.js
+    export const Context_Consumer = GlobalData.Consumer;
+
+4. Consumers Consumers
+
+    i.e.
+    //in news.js, (consumer js file)
+    import {Context_Consumer} from "../App.js"
+    <Context_Consumer>
+    {
+        ({firstName}) => ( 
+            <div>
+                <p> ${firstName}</p>
+            </div>
+
+        )//end function
+    }//end bracelet
+    <Context_Consumer>
+
+situation 1a (rerender both all Consumers when the Provider rerender)
+    //when the Provider re-render, the Consumer(s) will rerender as well
+    <Context_Provider.Provider value={{name:"tom"}}>
+
+situation 1b (rerender only the Provider)
+    //when the Provider re-render, the consumers WON'T rerender;thus, only the Provider rerender
+    <Context_Provider.Provider value={object}>
+
+situation 2 - consume multiple contexts
+
+    //in App.js
+    const GlobalData = React.createContext()
+    export const 

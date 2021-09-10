@@ -41,3 +41,9 @@ situation 1b (rerender only the Provider)
     <Context_Provider.Provider value={object}>
 
 situation 2 - consume multiple contexts
+
+    //in App.js
+    const GlobalData = React.createContext()
+    export const Consumer_GlobalData = GlobalData.Consumer;
+    const GlobalTheme = React.crateContext()
+    

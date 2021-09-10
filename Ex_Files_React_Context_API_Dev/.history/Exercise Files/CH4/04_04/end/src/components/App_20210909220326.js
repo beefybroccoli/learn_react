@@ -5,7 +5,7 @@ import News from "./News/News";
 const Context_Data = React.createContext();
 const Context_Theme = React.createContext();
 export const Consumer_Context_Data = Context_Data.Consumer;
-export const Consumer_Context_Theme = Context_Theme.Consumer;
+export const  Consumer_Context_Theme = Context_Theme.Consumer;
 
 class App extends Component {
   constructor(props) {
