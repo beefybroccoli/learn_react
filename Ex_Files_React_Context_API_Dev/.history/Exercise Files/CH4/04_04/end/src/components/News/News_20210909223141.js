@@ -15,9 +15,9 @@ class News extends Component {
   componentDidMount() {
     const url = `https://newsapi.org/v2/${this.props.news.type}?${
       this.props.news.query
-    }&apiKey=9602c64a7b074e36b8fd71fb104515a8`;
+    }&apiKey=3c5c8f726f4f4d87a352e63017c68eb0`;
 
-    // console.log("url = ", url);
+    console.log("url = ", url);
     fetch(url)
       .then((response) => {
         return response.json();
@@ -32,9 +32,9 @@ class News extends Component {
           error: true,
         });
       });
-  } //end
+  }
 
-  helper_renderItems = () => {
+  renderItems() {
     if (!this.state.error) {
       return this.state.news.map((item) => (
         <Consumer_Context_Theme>
@@ -48,10 +48,10 @@ class News extends Component {
     } else {
       return <Error />;
     }
-  };
+  }
 
   render() {
-    return <div className="row">{this.helper_renderItems()}</div>;
+    return <div className="row">{this.renderItems()}</div>;
   }
 }
 

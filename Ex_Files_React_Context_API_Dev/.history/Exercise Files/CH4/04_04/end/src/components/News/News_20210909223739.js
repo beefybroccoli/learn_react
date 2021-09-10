@@ -32,10 +32,11 @@ class News extends Component {
           error: true,
         });
       });
-  } //end
+  }
 
-  helper_renderItems = () => {
+  renderItems() {
     if (!this.state.error) {
+      console.log(Consumer_Context_Theme);
       return this.state.news.map((item) => (
         <Consumer_Context_Theme>
           {({ styles }) => (
@@ -48,10 +49,10 @@ class News extends Component {
     } else {
       return <Error />;
     }
-  };
+  }
 
   render() {
-    return <div className="row">{this.helper_renderItems()}</div>;
+    return <div className="row">{this.renderItems()}</div>;
   }
 }
 

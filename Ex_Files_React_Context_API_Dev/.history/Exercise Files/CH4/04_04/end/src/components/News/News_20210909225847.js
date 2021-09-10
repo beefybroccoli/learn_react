@@ -34,7 +34,7 @@ class News extends Component {
       });
   } //end
 
-  helper_renderItems = () => {
+  const helper_renderItems = () . {
     if (!this.state.error) {
       return this.state.news.map((item) => (
         <Consumer_Context_Theme>
@@ -48,7 +48,7 @@ class News extends Component {
     } else {
       return <Error />;
     }
-  };
+  }
 
   render() {
     return <div className="row">{this.helper_renderItems()}</div>;

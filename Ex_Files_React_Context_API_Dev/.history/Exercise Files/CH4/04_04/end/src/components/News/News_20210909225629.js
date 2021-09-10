@@ -34,24 +34,25 @@ class News extends Component {
       });
   } //end
 
-  helper_renderItems = () => {
-    if (!this.state.error) {
-      return this.state.news.map((item) => (
-        <Consumer_Context_Theme>
-          {({ styles }) => (
-            <div style={styles}>
-              <NewSingle key={item.url} item={item} />
-            </div>
-          )}
-        </Consumer_Context_Theme>
-      ));
-    } else {
-      return <Error />;
-    }
-  };
+  helper_renderItems() {
+
+  }
 
   render() {
-    return <div className="row">{this.helper_renderItems()}</div>;
+    return <div className="row">{
+      if (!this.state.error) {
+        return this.state.news.map((item) => (
+          <Consumer_Context_Theme>
+            {({ styles }) => (
+              <div style={styles}>
+                <NewSingle key={item.url} item={item} />
+              </div>
+            )}
+          </Consumer_Context_Theme>
+        ));
+      } else {
+        return <Error />;
+      }}</div>;
   }
 }
 

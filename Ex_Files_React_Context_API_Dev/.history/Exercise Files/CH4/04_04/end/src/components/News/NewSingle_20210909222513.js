@@ -2,7 +2,12 @@ import React from "react";
 import { Consumer_Context_Data } from "../App";
 
 export function NewSingle({ item }) {
-  console.log(Consumer_Context_Data.name);
+  let temp_name;
+  <Consumer_Context_Data>
+
+    </Consumer_Context_Data>;
+
+  console.log(Consumer_Context_Data.name
   return (
     <div>
       <Consumer_Context_Data>
