@@ -4,16 +4,17 @@ export function func_fetch_data(
   cb_setLoadingState,
   cb_setError
 ) {
+  
   cb_setLoadingState(true);
 
   cb_setData("(sample data)");
-  try {
+  try{
     fetch(API_URL)
       .then((response) => cb_setData(response))
       .catch((error) => cb_setError(error));
-  } catch (error) {
-    console.log(error);
-  } finally {
+  }catch(){
+
+  }  finally{
     cb_setLoadingState(false);
   }
 }

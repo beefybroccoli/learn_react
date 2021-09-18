@@ -379,10 +379,7 @@ function Component_Form_2() {
 
   return (
     <div>
-      <p>
-        ================================================================================================================
-      </p>
-      <h1>App2.js</h1>
+      <h1>App</h1>
       <h3>Component_Form_2</h3>
       <p>
         Manage a form using a single <em>slice of state</em>

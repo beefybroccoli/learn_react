@@ -21,7 +21,7 @@ export default function App() {
           <Route exact path="/" component={CompHome} />
           <Route path="/contact" component={CompContact} />
           <Route path="/about" component={CompAbout} />
-          <Route path="/dynamicrouting" component={CompDynamicRouting} />
+          <Route path="/DynamicRouting" component={CompDynamicRouting} />
           <Route path="/UserProfile" component={CompUserProfile} />
         </Switch>
       </div>

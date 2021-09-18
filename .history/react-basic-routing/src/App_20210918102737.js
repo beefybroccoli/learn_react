@@ -19,10 +19,10 @@ export default function App() {
 
         <Switch>
           <Route exact path="/" component={CompHome} />
-          <Route path="/contact" component={CompContact} />
-          <Route path="/about" component={CompAbout} />
-          <Route path="/dynamicrouting" component={CompDynamicRouting} />
           <Route path="/UserProfile" component={CompUserProfile} />
+          <Route path="/DynamicRouting" component={CompDynamicRouting} />
+          <Route path="/about" component={CompAbout} />
+          <Route path="/contact" component={CompContact} />
         </Switch>
       </div>
     </div>

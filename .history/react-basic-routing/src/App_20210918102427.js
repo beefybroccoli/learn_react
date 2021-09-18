@@ -8,6 +8,17 @@ import { DynamicRouting as CompDynamicRouting } from "./component/DynamicRouting
 import { UserProfile as CompUserProfile } from "./component/UserProfile";
 
 export default function App() {
+  //a component for a Blog
+  const CompBlog_Object = {
+    pathname: "/blog",
+    search: "?name=john",
+    hash: "#theHash",
+    state: { from: "home page" },
+  };
+  const CompBlog = (props) => {
+    return <h3> Blog nobody reads</h3>;
+  };
+
   return (
     <div className="App">
       <div className="App-header">
@@ -16,13 +27,15 @@ export default function App() {
         <Link to="/about">About</Link>
         <Link to="/dynamicrouting">Dynamic Routing</Link>
         <Link to="/userprofile">User Profile</Link>
-
+        <Link to={CompBlog_Object}>Blog</Link>
+        
         <Switch>
-          <Route exact path="/" component={CompHome} />
-          <Route path="/contact" component={CompContact} />
-          <Route path="/about" component={CompAbout} />
-          <Route path="/dynamicrouting" component={CompDynamicRouting} />
           <Route path="/UserProfile" component={CompUserProfile} />
+          <Route path="/DynamicRouting" component={CompDynamicRouting} />
+          <Route path="/about" component={CompAbout} />
+          <Route path="/contact" component={CompContact} />
+          <Route exact path="/" component={CompHome} />
+          <Route path={CompBlog_Object.pathname} component={CompBlog_Object} />
         </Switch>
       </div>
     </div>

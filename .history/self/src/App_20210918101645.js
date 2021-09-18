@@ -64,7 +64,7 @@ const dishesObject = dishes.map((dish, index) => ({
 function App() {
   return (
     <div className="App">
-      <h1>App.js</h1>
+      <h1>App</h1>
       <Header name="Sam" />
       <Main
         adjective="amazing"
