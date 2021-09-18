@@ -12,7 +12,12 @@ export default function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <NavBar />
+        <Link to="/">Home</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/about">About</Link>
+        <Link to="/dynamicrouting">Dynamic Routing</Link>
+        <Link to="/userprofile">User Profile</Link>
+        
 
         <Switch>
           <Route exact path="/" component={CompHome} />
