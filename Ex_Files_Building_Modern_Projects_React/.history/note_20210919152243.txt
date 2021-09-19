@@ -1,0 +1,5 @@
+what we need for react?
+_index.html
+_support for ES6
+_webpack
+_Root component 

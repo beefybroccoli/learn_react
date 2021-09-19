@@ -1,0 +1,3 @@
+what we need for react?
+_index.html
+_support for ES6
