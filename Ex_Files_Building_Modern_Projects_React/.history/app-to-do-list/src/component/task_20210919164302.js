@@ -5,10 +5,10 @@ export default function Task(props) {
     <div>
       <h3>Task.js</h3>
       <div className="button-container">
-        <button className="completed-button">Mark as completed</button>
+            <button class>Mark as completed</button>
       </div>
       <div className="button-container">
-        <button className="remove-button">Remove Task</button>
+            <button>Remove Task</button>
       </div>
     </div>
   );
