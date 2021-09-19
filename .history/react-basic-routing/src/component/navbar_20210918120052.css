@@ -1,0 +1,24 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: green;
+}
+
+ul li a:hover{
+    background-color: blue;
+}
+a:active{
+    background-color:red;
+}
