@@ -1,0 +1,26 @@
+import React from "react";
+import styled from "styled-components";
+
+const Container_DIV = styled.div`
+  border: 1px solid black;
+  width: 25%;
+  margin: 0;
+`;
+export default function Task(props) {
+  const cb_onClick = () => {
+    onRemovePressed(task.text);
+  };
+
+  return (
+    <Container_DIV>
+      <h3>Task.js</h3>
+      <p>{task}</p>
+      <div className="button-container">
+        <button className="completed-button">Mark as completed</button>
+      </div>
+      <div className="button-container" onClick={cb_onClick}>
+        <button className="remove-button">Remove Task</button>
+      </div>
+    </Container_DIV>
+  );
+}

@@ -1,0 +1,13 @@
+export const CREATE_TASK = "CREATE_TASK";
+export const createTask = (text) => {
+  return {
+    type: CREATE_TASK,
+    payload: { text },
+  };
+};
+
+export const REMOVE_TASK = "REMOVE_TODO";
+export const removeTask = (text) => ({
+  type: REMOVE_TASK,
+  paylod: { text },
+});
