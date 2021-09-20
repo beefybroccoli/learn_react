@@ -1,31 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { createTask } from "../redux/action";
+import {} from "../redux/action";
 
 function ToDoForm({ todos, onCreatePressed }) {
-  const [stateFormData, set_stateForm] = useState("");
-
-  const cb_onClick = (stateForm) => {
-    const isDuplicateText = todos.some((todo) => todo.text === stateForm);
-
-    if (!isDuplicateText) {
-      onCreatePressed(stateForm);
-      //clear form
-      set_stateForm("");
-    } //end if
-  }; //end onClick
-
+  const [stateForm, set_stateForm] = useState("");
   return (
     <div>
       <label>
         <input
           type="text"
           placeHolder="(Type task)"
-          value={stateFormData}
+          value={stateForm}
           onChange={(e) => set_stateForm(e.target.value)}
         />
       </label>
-      <button onClick={cb_onClick}>Create Task</button>
+      <button>Create Task</button>
     </div>
   );
 }
@@ -35,7 +24,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onCreatePressed: (text) => dispatch(createTask(text)),
+  onCreatePressed: (text) => dispatch(),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ToDoForm);

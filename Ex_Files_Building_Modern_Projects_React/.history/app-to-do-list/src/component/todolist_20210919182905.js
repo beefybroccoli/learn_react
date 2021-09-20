@@ -2,8 +2,7 @@ import React from "react";
 import Task from "./task";
 import ToDoForm from "./todoform";
 import styled from "styled-components";
-import { connect } from "react-redux";
-import { removeTask } from "../redux/action";
+import {connect} from 're'
 
 const Container_DIV = styled.div`
   border: 1px solid black;
@@ -19,7 +18,7 @@ const Flex_Div = styled.div`
   flex-direction: row;
   /* margin: 1%; */
 `;
-function ToDoList({
+export default function ToDoList({
   todos = ["sample1", "sample1", "sample1", "sample1", "sample2"],
 }) {
   return (
@@ -33,13 +32,3 @@ function ToDoList({
     </Container_DIV>
   );
 }
-
-const mapStateToProps = (state) => ({
-  todos: state.todos,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  onRemovePressed: (text) => dispatch(removeTask(text)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);

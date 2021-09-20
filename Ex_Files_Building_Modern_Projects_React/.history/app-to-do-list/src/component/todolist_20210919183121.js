@@ -42,4 +42,4 @@ const mapDispatchToProps = (dispatch) => ({
   onRemovePressed: (text) => dispatch(removeTask(text)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);
+export default connect(map)(ToDoList);

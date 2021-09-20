@@ -1,6 +1,6 @@
 import { CREATE_TASK, REMOVE_TASK } from "./action";
 
-export const Func_todos = (state = [], action) => {
+export const todos = (state = [], action) => {
   const { type, payload } = action;
 
   // eslint-disable-next-line default-case

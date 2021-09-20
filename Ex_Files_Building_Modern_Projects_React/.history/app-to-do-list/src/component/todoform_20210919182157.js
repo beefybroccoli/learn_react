@@ -3,17 +3,29 @@ import { connect } from "react-redux";
 import { createTask } from "../redux/action";
 
 function ToDoForm({ todos, onCreatePressed }) {
-  const [stateFormData, set_stateForm] = useState("");
+  const [stateForm, set_stateForm] = useState("");
 
-  const cb_onClick = (stateForm) => {
-    const isDuplicateText = todos.some((todo) => todo.text === stateForm);
+    const cb_onClick = () = {
+
+        const isDuplicateText = todos.some(todo => todo.text === inputValue);
+            
+            if (!isDuplicateText){
+                    onCreatePressed(stateForm);
+                    //clear form
+                    set_stateForm("");
+                }//end if
+
+    }//end onClick
+
+    /*
+    const isDuplicateText =todos.some(todo => todo.text === inputValue);
 
     if (!isDuplicateText) {
-      onCreatePressed(stateForm);
-      //clear form
-      set_stateForm("");
-    } //end if
-  }; //end onClick
+        onCreatePressed(inputValue);
+        setInputValue('');
+    }
+
+    */
 
   return (
     <div>
@@ -21,11 +33,18 @@ function ToDoForm({ todos, onCreatePressed }) {
         <input
           type="text"
           placeHolder="(Type task)"
-          value={stateFormData}
+          value={stateForm}
           onChange={(e) => set_stateForm(e.target.value)}
         />
       </label>
-      <button onClick={cb_onClick}>Create Task</button>
+      <button
+        onClick={cb_onClick}>
+        
+
+        
+      
+        Create Task
+      </button>
     </div>
   );
 }
