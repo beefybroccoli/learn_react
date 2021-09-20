@@ -20,6 +20,4 @@ Steps to add redux
     _run "npm install redux react-redux"
     _create store.js in "src" directory and (...write some code...)
     _in index.js
-    _.....import { Provider } from "react-redux";
-    _.....import { configureStore } from "./store";
-    _.....<Provider store={configureStore()}> <App /> </Provider>
+    

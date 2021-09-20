@@ -8,9 +8,8 @@ import { configureStore } from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={configureStore()}>
-      <App />
-    </Provider>
+    <Provider store={configureStore()}
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

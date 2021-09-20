@@ -18,8 +18,4 @@ In other words, we end up with a cycle that looks something like this: the UI tr
 
 Steps to add redux
     _run "npm install redux react-redux"
-    _create store.js in "src" directory and (...write some code...)
-    _in index.js
-    _.....import { Provider } from "react-redux";
-    _.....import { configureStore } from "./store";
-    _.....<Provider store={configureStore()}> <App /> </Provider>
+    _create store.js in d

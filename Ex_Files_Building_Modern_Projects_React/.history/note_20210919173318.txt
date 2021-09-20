@@ -17,9 +17,3 @@ our components are only allowed to make changes to the state by triggering a pre
 In other words, we end up with a cycle that looks something like this: the UI triggers an action, that action is reduced to get the new updated state, and the components in our application get read only access to that updated state.
 
 Steps to add redux
-    _run "npm install redux react-redux"
-    _create store.js in "src" directory and (...write some code...)
-    _in index.js
-    _.....import { Provider } from "react-redux";
-    _.....import { configureStore } from "./store";
-    _.....<Provider store={configureStore()}> <App /> </Provider>

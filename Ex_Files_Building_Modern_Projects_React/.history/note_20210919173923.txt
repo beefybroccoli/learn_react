@@ -22,4 +22,6 @@ Steps to add redux
     _in index.js
     _.....import { Provider } from "react-redux";
     _.....import { configureStore } from "./store";
-    _.....<Provider store={configureStore()}> <App /> </Provider>
+    _.....<Provider store={configureStore()}>
+      <App />
+    </Provider>
