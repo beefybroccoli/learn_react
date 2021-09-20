@@ -3,7 +3,7 @@ import Task from "./task";
 import ToDoForm from "./todoform";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import { removeTask, completeTask } from "../redux/action";
+import { removeAction, completeAction } from "../redux/action";
 
 const Container_DIV = styled.div`
   border: 1px solid black;
@@ -20,19 +20,23 @@ const Flex_Div = styled.div`
   /* margin: 1%; */
 `;
 function ToDoList(props) {
-  const { todos = [], onRemovePressed, onCompletePressed } = props;
+  const {
+    Store_State = [],
+    Dispatch_removeAction,
+    Dispatch_completeAction,
+  } = props;
   return (
     <Container_DIV>
       <ToDoForm />
       <Flex_Div>
-        {todos &&
-          todos.map((todo, index) => {
+        {Store_State &&
+          Store_State.map((eachTask, index) => {
             return (
               <Task
                 key={index}
-                task={todo}
-                onRemovePressed={onRemovePressed}
-                onCompletePressed={onCompletePressed}
+                task={eachTask}
+                Dispatch_removeAction={Dispatch_removeAction}
+                Dispatch_completeAction={Dispatch_completeAction}
               />
             );
           })}
@@ -41,13 +45,15 @@ function ToDoList(props) {
   );
 } //end ToDoList
 
+//????????????????????????????????????????
 const mapStateToProps = (state) => ({
-  todos: state.todos,
+  Store_State: state.Store_State,
 });
+// ???????????????????????????????????????
 
 const mapDispatchToProps = (dispatch) => ({
-  onRemovePressed: (text) => dispatch(removeTask(text)),
-  onCompletePressed: (text) => dispatch(completeTask(text)),
+  Dispatch_removeAction: (text) => dispatch(removeAction(text)),
+  Dispatch_completeAction: (text) => dispatch(completeAction(text)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);

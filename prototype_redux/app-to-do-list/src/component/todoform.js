@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { createTask } from "../redux/action";
+import { createAction } from "../redux/action";
 
 function ToDoForm(props) {
-  const { todos, onCreatePressed } = props;
+  const { Store_State, Dispatch_createAction } = props;
   const [stateFormData, set_stateFormData] = useState("");
 
   const cb_onChange = (event) => {
@@ -17,12 +17,14 @@ function ToDoForm(props) {
 
   const cb_onClick = () => {
     //prevent create duplicate text
-    const isDuplicateText = todos.some((todo) => todo.text === stateFormData);
+    const isDuplicateText = Store_State.some(
+      (eachTask) => eachTask.text === stateFormData
+    );
 
     if (!isDuplicateText) {
       // console.log("line 23, stateFormData = ", stateFormData);
       const valueToUse = stateFormData;
-      onCreatePressed(valueToUse);
+      Dispatch_createAction(valueToUse);
       //clear form
       set_stateFormData("");
     } //end if
@@ -44,13 +46,13 @@ function ToDoForm(props) {
 }
 
 const mapStateToProps = (state) => ({
-  todos: state.todos,
+  Store_State: state.Store_State,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onCreatePressed: (text) => {
+  Dispatch_createAction: (text) => {
     // console.log("line 41, text = ", text);
-    dispatch(createTask(text));
+    dispatch(createAction(text));
   },
 });
 

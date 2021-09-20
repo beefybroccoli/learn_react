@@ -1,34 +1,44 @@
-import { CREATE_TASK, REMOVE_TASK, COMPLETE_TASK } from "./action";
+import { CREATE_ACTION, REMOVE_ACTION, COMPLETE_ACTION } from "./action";
 
-export const todos = (state = [], action) => {
+//create a global state call "todos"
+export const Global_State = (state = [], action) => {
   const { type, payload } = action;
 
   // eslint-disable-next-line default-case
   switch (type) {
-    case CREATE_TASK: {
-      //get text property from payload
+    case CREATE_ACTION: {
+      //get data from payload
       const { text } = payload;
+      //create a newTask object
       const newTask = {
         text,
         isCompleted: false,
       };
+      //store the newTask object in (global) state
       return state.concat(newTask);
     }
-    case REMOVE_TASK: {
+    case REMOVE_ACTION: {
+      //get data from payload
       const { text } = payload;
-      return state.filter((todo) => todo.text !== text);
+      //remove the task from (global) state
+      return state.filter((eachTask) => eachTask.text !== text);
     }
-    case COMPLETE_TASK: {
+    case COMPLETE_ACTION: {
+      //get data from payload
       const { text } = payload;
-      return state.map((todo) => {
-        if (todo.text === text) {
-          return { ...todo, isCompleted: true };
+      //mark the task as complete in (global state)
+      return state.map((eachTask) => {
+        if (eachTask.text === text) {
+          return { ...eachTask, isCompleted: true };
         } else {
-          return todo;
+          return eachTask;
         }
       });
     }
     default:
+      //?????????????????????????????????????????????????????????????
+      //What is the purpose of default "return state"//??????????????
+      //?????????????????????????????????????????????????????????????
       return state;
   }
 };

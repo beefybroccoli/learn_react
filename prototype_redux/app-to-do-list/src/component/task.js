@@ -7,14 +7,14 @@ const Container_DIV = styled.div`
   margin: 0;
 `;
 export default function Task(props) {
-  const { task, onRemovePressed, onCompletePressed } = props;
+  const { task, Dispatch_removeAction, Dispatch_completeAction } = props;
 
   const cb_onClick_Remove = () => {
-    onRemovePressed(task.text);
+    Dispatch_removeAction && Dispatch_removeAction(task.text);
   };
 
   const cb_onClick_Complete = () => {
-    onCompletePressed(task.text);
+    Dispatch_completeAction && Dispatch_completeAction(task.text);
   };
 
   return (
