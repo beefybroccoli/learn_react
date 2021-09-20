@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
-function ToDoForm(props) {
+export default function ToDoForm(props) {
   const [stateForm, set_stateForm] = useState("");
   return (
     <div>
@@ -17,9 +17,3 @@ function ToDoForm(props) {
     </div>
   );
 }
-
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoForm);

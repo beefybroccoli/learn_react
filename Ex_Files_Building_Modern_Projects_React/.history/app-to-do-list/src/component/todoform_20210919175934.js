@@ -18,8 +18,8 @@ function ToDoForm(props) {
   );
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = state =>({});
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoForm);
+export default connect()(ToDoForm);
