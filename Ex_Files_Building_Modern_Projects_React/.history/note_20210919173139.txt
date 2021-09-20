@@ -14,4 +14,4 @@ Redux actions are j-son objects, consisting of two things, an action type, which
 (key point)
 our components are only allowed to make changes to the state by triggering a predefined actions and the only changes to the state that are allowed to take place in our application are the corresponding changes that we specify in our reducers. This all gives rise to what's referred to as unidirectional data flow.
 
-In other words, we end up with a cycle that looks something like this: the UI triggers an action, that action is reduced to get the new updated state, and the components in our application get read only access to that updated state.
+in other words, we end up with a cycle that looks something like this: the UI triggers an action, that action is reduced to get the new updated state, and the components in our application get read only access to that updated state. We'll go into more detail about this in videos that follow,

@@ -1,0 +1,10 @@
+what we need for react?
+_index.html
+_support for ES6
+_webpack
+_Root component (container that holds the rest of the application)
+_react-hot-loader
+
+Redux Store is essentially a big J-son object that serves as the single source of truth for all of our components. 
+
+Redux actions are j-son objects, consisting of two things, an action type, which is basically just a string naming the action, and a payload of additional data. The purpose of redux actions, is to explicitly define the different events that can occur in our application.
