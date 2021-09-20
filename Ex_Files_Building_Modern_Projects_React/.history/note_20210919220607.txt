@@ -24,4 +24,3 @@ Steps to add redux
     _.....import { configureStore } from "./store";
     _.....<Provider store={configureStore()}> <App /> </Provider>
 
-npm install redux-persist

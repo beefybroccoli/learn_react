@@ -20,7 +20,7 @@ const Flex_Div = styled.div`
   /* margin: 1%; */
 `;
 function ToDoList(props) {
-  const { todos = [], onRemovePressed, onCompletePressed } = props;
+  const { todos = [], onRemovePressed } = props;
   return (
     <Container_DIV>
       <ToDoForm />
@@ -28,12 +28,7 @@ function ToDoList(props) {
         {todos &&
           todos.map((todo, index) => {
             return (
-              <Task
-                key={index}
-                todo={todo}
-                onRemovePressed={onRemovePressed}
-                onCompletePressed={onCompletePressed}
-              />
+              <Task key={index} todo={todo} onRemovePressed={onRemovePressed} onCompletePressed={} />
             );
           })}
       </Flex_Div>

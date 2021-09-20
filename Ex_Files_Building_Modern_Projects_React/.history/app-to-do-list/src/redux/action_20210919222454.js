@@ -12,10 +12,4 @@ export const removeTask = (text) => ({
   payload: { text },
 });
 
-export const COMPLETE_TASK = "COMPLETE_TASK";
-export const completeTask = (text) => {
-  return {
-    type: COMPLETE_TASK,
-    payload: { text },
-  };
-};
+export const COMPLETE_TASK = "COMPLETE_TASK"

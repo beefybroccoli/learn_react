@@ -1,4 +1,4 @@
-import { CREATE_TASK, REMOVE_TASK, COMPLETE_TASK } from "./action";
+import { CREATE_TASK, REMOVE_TASK } from "./action";
 
 export const todos = (state = [], action) => {
   const { type, payload } = action;
@@ -20,7 +20,7 @@ export const todos = (state = [], action) => {
     }
     case COMPLETE_TASK: {
       const { text } = payload;
-      return state.filter((todo) => (todo.isCompleted = true));
+      return state.filter((to) => todo.text !== text);
     }
     default:
       return state;

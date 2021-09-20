@@ -7,15 +7,10 @@ const Container_DIV = styled.div`
   margin: 0;
 `;
 export default function Task(props) {
-  const { todo, onRemovePressed, onCompletePressed } = props;
+  const { todo, onRemovePressed } = props;
 
   const cb_onClick_Remove = () => {
     onRemovePressed(todo.text);
-  };
-
-  const cb_onClick_Complete = () => {
-    onCompletePressed(todo.text);
-    todo.isCompleted = true;
   };
 
   return (
@@ -23,11 +18,7 @@ export default function Task(props) {
       <h3>Task.js</h3>
       <p>{todo.text}</p>
       <div className="button-container">
-        {todo.isCompleted ? null : (
-          <button className="completed-button" onClick={cb_onClick_Complete}>
-            Mark as completed
-          </button>
-        )}
+        <button className="completed-button">Mark as completed</button>
       </div>
       <div className="button-container" onClick={cb_onClick_Remove}>
         <button className="remove-button">Remove Task</button>
