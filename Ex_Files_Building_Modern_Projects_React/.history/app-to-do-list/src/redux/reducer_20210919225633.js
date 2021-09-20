@@ -21,11 +21,7 @@ export const todos = (state = [], action) => {
     case COMPLETE_TASK: {
       const { text } = payload;
       return state.map((todo) => {
-        if (todo.text === text) {
-          return { ...todo, isCompleted: true };
-        } else {
-          return todo;
-        }
+        if(todo.text === text) && return { ...todo, isCompleted: true };
       });
     }
     default:

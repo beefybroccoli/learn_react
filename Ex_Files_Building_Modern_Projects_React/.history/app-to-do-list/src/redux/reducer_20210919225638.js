@@ -23,8 +23,6 @@ export const todos = (state = [], action) => {
       return state.map((todo) => {
         if (todo.text === text) {
           return { ...todo, isCompleted: true };
-        } else {
-          return todo;
         }
       });
     }

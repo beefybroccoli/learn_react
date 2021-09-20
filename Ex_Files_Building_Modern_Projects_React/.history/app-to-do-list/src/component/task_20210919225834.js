@@ -22,7 +22,7 @@ export default function Task(props) {
       <h3>Task.js</h3>
       <p>{task.text}</p>
       <div className="button-container">
-        {!task.isCompleted && (
+        {!task.isCompleted && 
           <button className="completed-button" onClick={cb_onClick_Complete}>
             Mark as completed
           </button>

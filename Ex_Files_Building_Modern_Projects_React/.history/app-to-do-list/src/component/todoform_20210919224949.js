@@ -17,7 +17,7 @@ function ToDoForm(props) {
 
   const cb_onClick = () => {
     //prevent create duplicate text
-    const isDuplicateText = todos.some((todo) => todo.text === stateFormData);
+    const isDuplicateText = todos.some((todo) => todo.text === stateForm);
 
     if (!isDuplicateText) {
       // console.log("line 23, stateFormData = ", stateFormData);
