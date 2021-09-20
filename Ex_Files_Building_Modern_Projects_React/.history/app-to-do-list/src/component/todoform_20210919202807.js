@@ -49,7 +49,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onCreatePressed: (text) => {
-    // console.log("line 41, text = ", text);
+    console.log("line 41, text = ", text);
     dispatch(createTask(text));
   },
 });

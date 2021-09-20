@@ -20,7 +20,7 @@ function ToDoForm(props) {
     // const isDuplicateText = todos.some((todo) => todo.text === stateForm);
 
     // if (!isDuplicateText) {
-    // console.log("line 23, stateFormData = ", stateFormData);
+    console.log("line 23, stateFormData = ", stateFormData);
     const valueToUse = stateFormData;
     onCreatePressed(valueToUse);
     //clear form
@@ -49,7 +49,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onCreatePressed: (text) => {
-    // console.log("line 41, text = ", text);
+    console.log("line 41, text = ", text);
     dispatch(createTask(text));
   },
 });
