@@ -1,9 +1,8 @@
 import { CREATE_TASK, REMOVE_TASK } from "./action";
 
-export const todos = (state = [], action) => {
-  const { type, payload } = action;
+export const todos = (state, action) => {
+  const { type, paylod } = action;
 
-  // eslint-disable-next-line default-case
   switch (type) {
     case CREATE_TASK: {
       //get text property from payload
@@ -12,13 +11,11 @@ export const todos = (state = [], action) => {
         text,
         isCompledted: false,
       };
-      return state.concat(newTask);
+      return state.concat(newTodo)
     }
     case REMOVE_TASK: {
-      const { text } = payload;
-      return state.filter((todo) => todo.text != text);
     }
-    default:
-      return state;
   }
+
+  return state;
 };
