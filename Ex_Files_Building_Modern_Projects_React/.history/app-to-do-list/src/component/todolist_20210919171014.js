@@ -11,7 +11,7 @@ const Container_DIV = styled.div`
 `;
 const Flex_Div = styled.div`
   width: 100;
-  padding: 0;
+  padding: 5;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

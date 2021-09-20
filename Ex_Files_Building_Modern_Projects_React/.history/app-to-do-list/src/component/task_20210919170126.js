@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 const Container_DIV = styled.div`
   border: 1px solid black;
-  width: 25%;
-  margin: 0;
+  width: 20%;
 `;
 export default function Task({ task }) {
   return (

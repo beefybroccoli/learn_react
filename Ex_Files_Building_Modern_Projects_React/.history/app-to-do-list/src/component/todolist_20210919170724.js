@@ -7,15 +7,12 @@ const Container_DIV = styled.div`
   border: 1px solid black;
   width: 80vw;
   margin: 10vw;
-  padding: 0;
 `;
 const Flex_Div = styled.div`
   width: 100;
-  padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
-  /* margin: 1%; */
 `;
 export default function ToDoList({
   todos = ["sample1", "sample1", "sample1", "sample1", "sample2"],

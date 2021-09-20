@@ -11,11 +11,10 @@ const Container_DIV = styled.div`
 `;
 const Flex_Div = styled.div`
   width: 100;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* margin: 1%; */
+  margin: 1%;
 `;
 export default function ToDoList({
   todos = ["sample1", "sample1", "sample1", "sample1", "sample2"],

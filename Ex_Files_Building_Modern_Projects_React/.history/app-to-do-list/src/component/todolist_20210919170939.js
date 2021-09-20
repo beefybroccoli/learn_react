@@ -15,7 +15,7 @@ const Flex_Div = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* margin: 1%; */
+  margin: 1%;
 `;
 export default function ToDoList({
   todos = ["sample1", "sample1", "sample1", "sample1", "sample2"],

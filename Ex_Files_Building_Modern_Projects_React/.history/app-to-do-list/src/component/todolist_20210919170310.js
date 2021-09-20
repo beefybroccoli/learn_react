@@ -5,20 +5,27 @@ import styled from "styled-components";
 
 const Container_DIV = styled.div`
   border: 1px solid black;
-  width: 80vw;
-  margin: 10vw;
-  padding: 0;
+  width: 80;
+  margin: 10%;
 `;
 const Flex_Div = styled.div`
-  width: 100;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* margin: 1%; */
 `;
 export default function ToDoList({
-  todos = ["sample1", "sample1", "sample1", "sample1", "sample2"],
+  todos = [
+    "sample1",
+    "sample1",
+    "sample1",
+    "sample1",
+    "sample1",
+    "sample1",
+    "sample1",
+    "sample1",
+    "sample1",
+    "sample1",
+  ],
 }) {
   return (
     <Container_DIV>

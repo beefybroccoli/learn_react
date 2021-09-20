@@ -5,6 +5,7 @@ const Container_DIV = styled.div`
   border: 1px solid black;
   width: 25%;
   margin: 0;
+  padding: 0;
 `;
 export default function Task({ task }) {
   return (
