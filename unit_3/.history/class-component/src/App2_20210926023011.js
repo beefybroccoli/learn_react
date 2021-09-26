@@ -1,7 +1,21 @@
 import React from "react";
-class Personality extends React.Component {
+class Person extends React.Component {
+  constructor(props) {
+    //inherent properties from parent
+    super();
+    this.state = {
+      name: props.name,
+      occupation: props.occupation,
+      favorite: props.favorite,
+    };
+  }
   render() {
-    return <p>my favorite pet is a {this.props.personality}</p>;
+    return (
+      <p>
+        My name is {this.state.name}. My job is a {this.state.occupation}. My
+        favorite book is {this.state.favorite}.
+      </p>
+    );
   }
 }
 class App2 extends React.Component {
@@ -29,7 +43,7 @@ class App2 extends React.Component {
           My name is {this.state.name}. My job is a {this.state.occupation}. My
           favorite book is {this.state.favorite}.
         </p>
-        <Personality personality="hamster" />
+        <Person name="sam" occupation="nurse" favorite="(no title)" />
         <button onClick={this.handleClick}></button>
       </div>
     );

@@ -8,7 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <App2 favorite="(no book title)" />
+    <App2 props={}/>
   </React.StrictMode>,
   document.getElementById("root")
 );

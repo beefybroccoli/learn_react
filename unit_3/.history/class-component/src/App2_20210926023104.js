@@ -1,7 +1,11 @@
 import React from "react";
 class Personality extends React.Component {
   render() {
-    return <p>my favorite pet is a {this.props.personality}</p>;
+    return (
+      <p>
+        my favorite pet is a {}
+      </p>
+    );
   }
 }
 class App2 extends React.Component {
@@ -29,7 +33,7 @@ class App2 extends React.Component {
           My name is {this.state.name}. My job is a {this.state.occupation}. My
           favorite book is {this.state.favorite}.
         </p>
-        <Personality personality="hamster" />
+        <Person name="sam" occupation="nurse" favorite="(no title)" />
         <button onClick={this.handleClick}></button>
       </div>
     );

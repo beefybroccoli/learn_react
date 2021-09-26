@@ -1,10 +1,5 @@
 import React from "react";
-class Personality extends React.Component {
-  render() {
-    return <p>my favorite pet is a {this.props.personality}</p>;
-  }
-}
-class App2 extends React.Component {
+class Person extends React.Component {
   constructor(props) {
     //inherent properties from parent
     super();
@@ -13,6 +8,20 @@ class App2 extends React.Component {
       occupation: props.occupation,
       favorite: props.favorite,
     };
+  }
+  render() {
+    return (
+      <p>
+        My name is {this.state.name}. My job is a {this.state.occupation}. My
+        favorite book is {this.state.favorite}.
+      </p>
+    );
+  }
+}
+class App2 extends React.Component {
+  constructor(props) {
+    //inherent properties from parent
+    super();
   }
 
   handleClick = () => {
@@ -25,11 +34,7 @@ class App2 extends React.Component {
     return (
       <div>
         <h2>App2.js</h2>
-        <p>
-          My name is {this.state.name}. My job is a {this.state.occupation}. My
-          favorite book is {this.state.favorite}.
-        </p>
-        <Personality personality="hamster" />
+        <Person name="sam" occupation="nurse" favorite="(no title)" />
         <button onClick={this.handleClick}></button>
       </div>
     );
