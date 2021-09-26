@@ -14,7 +14,7 @@ export default class Item extends React.Component {
     const handleOnClick = (props) => {
       console.log("clicked on an item");
       // this.setState({ purchased: !this.props.purchased });
-      console.log(props.name);
+      console.log(this.props.name);
     };
     const { name, purchased } = this.props;
     return (

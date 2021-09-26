@@ -4,6 +4,7 @@ export default class ListForm extends React.Component {
   handleChanges = (e) => {};
 
   render() {
+    const [stateFormData, set_stateFormData] = useState("");
     return (
       <div>
         <form>

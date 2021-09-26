@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 export default class ListForm extends React.Component {
   handleChanges = (e) => {};
-
   render() {
     return (
       <div>

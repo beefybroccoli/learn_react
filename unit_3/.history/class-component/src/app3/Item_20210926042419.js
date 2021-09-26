@@ -5,20 +5,20 @@ const Container = styled.div`
   border: 1px solid green;
   margin: 5px;
   padding: 5px;
-  text-decoration: ${(props) => (props.purchased ? "line-through" : "")};
-  background-color: ${(props) => (props.purchased ? "green" : "yellow")};
+  text-decoration: ${(props) => (purchased ? "line-through" : "")};
+  background-color: ${(props) => (purchased ? "green" : "yellow")};
 `;
 
 export default class Item extends React.Component {
+  handleOnClick = (event) => {
+    event.stopPropagation();
+    console.log("clicked on an item");
+    console.log(event);
+  };
   render() {
-    const handleOnClick = (props) => {
-      console.log("clicked on an item");
-      // this.setState({ purchased: !this.props.purchased });
-      console.log(props.name);
-    };
     const { name, purchased } = this.props;
     return (
-      <Container onclick={handleOnClick}>
+      <Container onclick={this.handleOnClick}>
         {/* <h3>Item.js</h3> */}
         <p>Name : {name}</p>
         <p>Purchased: {purchased ? "Yes" : "No"}</p>

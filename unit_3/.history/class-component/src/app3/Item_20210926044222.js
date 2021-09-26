@@ -10,15 +10,15 @@ const Container = styled.div`
 `;
 
 export default class Item extends React.Component {
+  const handleOnClick = () => {
+    console.log("clicked on an item");
+    // this.setState({ purchased: !this.props.purchased });
+    console.log(this.props.name);
+  };
   render() {
-    const handleOnClick = (props) => {
-      console.log("clicked on an item");
-      // this.setState({ purchased: !this.props.purchased });
-      console.log(props.name);
-    };
     const { name, purchased } = this.props;
     return (
-      <Container onclick={handleOnClick}>
+      <Container>
         {/* <h3>Item.js</h3> */}
         <p>Name : {name}</p>
         <p>Purchased: {purchased ? "Yes" : "No"}</p>
