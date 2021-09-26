@@ -47,7 +47,7 @@ function ToDoForm(props) {
 
 const mapStateToProps = (state) => ({
   Store_State: state.Store_State,
-  //Store_State : state
+  
 });
 
 const mapDispatchToProps = (dispatch) => ({

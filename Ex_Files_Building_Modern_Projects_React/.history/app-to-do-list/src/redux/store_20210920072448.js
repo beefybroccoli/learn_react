@@ -17,5 +17,4 @@ const rootReducer = combineReducers(reducers);
 //create a cb function, which return createStore(rootReducer)
 export const configureStore = () => {
   return createStore(rootReducer);
-  // return createStore(Reducer);
 };

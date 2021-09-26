@@ -30,5 +30,5 @@ npm install redux-persist
 
 Global_State{
     profile : {key:value, ....},
-    arrayOfObject : [ object, ....]
+    pr
 }
