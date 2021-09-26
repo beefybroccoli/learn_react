@@ -12,6 +12,6 @@ export const list_of_products = [
   {
     name: "rice",
     id: 3,
-    purchased: true,
+    purchased: false,
   },
 ];

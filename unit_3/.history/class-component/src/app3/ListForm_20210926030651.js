@@ -5,11 +5,10 @@ export default class ListForm extends React.Component {
   render() {
     return (
       <div>
-        <form>
-          <h3>ListForm.js</h3>
-          <input type="text" name="item" />
-          <button>Add`</button>
-        </form>
+          <form></form>
+        <h3>ListForm.js</h3>
+        <input type="text" name="item" />
+        <button>Add`</button>
       </div>
     );
   }

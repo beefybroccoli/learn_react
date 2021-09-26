@@ -22,7 +22,7 @@ export default class GroceryList extends React.Component {
                 <Item
                   key={eachItem.id}
                   name={eachItem.name}
-                  purchased={eachItem.purchased}
+                  purchased={eachItem.purchase}
                 />
               );
             })}

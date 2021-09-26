@@ -7,8 +7,7 @@ export default class ListForm extends React.Component {
       <div>
         <form>
           <h3>ListForm.js</h3>
-          <input type="text" name="item" />
-          <button>Add`</button>
+
         </form>
       </div>
     );

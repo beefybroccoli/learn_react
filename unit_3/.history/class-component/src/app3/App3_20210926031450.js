@@ -16,7 +16,8 @@ class App3 extends React.Component {
   render() {
     return (
       <Container>
-        <h2>App3.js - Shopping List</h2>
+        <h2>App3.js</h2>
+        <h3>Shopping List</h3>
         <main>
           <ListForm />
           <GroceryList groceries={list_of_products} />

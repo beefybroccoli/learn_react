@@ -18,13 +18,7 @@ export default class GroceryList extends React.Component {
         <Div_Flex>
           {groceries &&
             groceries.map((eachItem) => {
-              return (
-                <Item
-                  key={eachItem.id}
-                  name={eachItem.name}
-                  purchased={eachItem.purchased}
-                />
-              );
+              return <Item key={eachItem.id} name={eachItem.name} />;
             })}
         </Div_Flex>
         <button>Clear Purchase</button>
