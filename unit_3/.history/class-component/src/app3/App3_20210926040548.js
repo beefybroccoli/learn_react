@@ -6,7 +6,7 @@ import { list_of_products } from "./sample_data";
 
 const Container = styled.div`
   border: 1px solid black;
-  margin: 10px 10% 10px 10%;
+  margin: 10px 0% 10px 20%;
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
