@@ -10,17 +10,13 @@ const Container = styled.div`
 `;
 
 const Span = styled.span`
-  /* background-color: gray; */
+  background-color: gray;
   color: red;
 `;
 class Personality extends React.Component {
   render() {
     const { personality } = this.props;
-    return (
-      <p>
-        my favorite pet is a <Span>{personality}</Span>
-      </p>
-    );
+    return <p>my favorite pet is a {personality}</p>;
   }
 }
 class App2 extends React.Component {
@@ -45,9 +41,8 @@ class App2 extends React.Component {
       <Container>
         <h2>App2.js</h2>
         <p>
-          My name is <Span>{this.state.name}</Span>. My job is a{" "}
-          <Span>{this.state.occupation}</Span>. My favorite book is{" "}
-          <Span>{this.state.favorite}</Span>.
+          My name is <Span>{this.state.name}</Span>. My job is a {this.state.occupation}. My
+          favorite book is {this.state.favorite}.
         </p>
         <Personality personality="hamster" />
         <button onClick={this.handleClick}>Change Name</button>

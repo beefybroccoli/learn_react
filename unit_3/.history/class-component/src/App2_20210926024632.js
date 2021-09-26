@@ -4,23 +4,12 @@ import styled from "styled-components";
 const Container = styled.div`
   border: 1px solid black;
   margin: 0 20%;
-  padding: 5%;
-  align-items: center;
-  text-align: center;
-`;
-
-const Span = styled.span`
-  /* background-color: gray; */
-  color: red;
+  padding:
 `;
 class Personality extends React.Component {
   render() {
     const { personality } = this.props;
-    return (
-      <p>
-        my favorite pet is a <Span>{personality}</Span>
-      </p>
-    );
+    return <p>my favorite pet is a {personality}</p>;
   }
 }
 class App2 extends React.Component {
@@ -45,9 +34,8 @@ class App2 extends React.Component {
       <Container>
         <h2>App2.js</h2>
         <p>
-          My name is <Span>{this.state.name}</Span>. My job is a{" "}
-          <Span>{this.state.occupation}</Span>. My favorite book is{" "}
-          <Span>{this.state.favorite}</Span>.
+          My name is {this.state.name}. My job is a {this.state.occupation}. My
+          favorite book is {this.state.favorite}.
         </p>
         <Personality personality="hamster" />
         <button onClick={this.handleClick}>Change Name</button>

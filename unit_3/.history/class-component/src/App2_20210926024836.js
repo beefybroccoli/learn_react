@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const Span = styled.span`
-  /* background-color: gray; */
+  background-color: gray;
   color: red;
 `;
 class Personality extends React.Component {

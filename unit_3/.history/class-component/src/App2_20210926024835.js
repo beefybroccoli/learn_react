@@ -10,17 +10,13 @@ const Container = styled.div`
 `;
 
 const Span = styled.span`
-  /* background-color: gray; */
+  background-color: gray;
   color: red;
 `;
 class Personality extends React.Component {
   render() {
     const { personality } = this.props;
-    return (
-      <p>
-        my favorite pet is a <Span>{personality}</Span>
-      </p>
-    );
+    return <p>my favorite pet is a <Span>{personality}</p>;
   }
 }
 class App2 extends React.Component {
