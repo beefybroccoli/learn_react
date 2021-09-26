@@ -10,7 +10,6 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <App2 favorite="(no book title)" />
-    <App3 />
   </React.StrictMode>,
   document.getElementById("root")
 );

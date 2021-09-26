@@ -3,14 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import App2 from "./app2/App2";
-import App3 from "./app3/App3";
+import App3 from "./app3/App3"
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <App2 favorite="(no book title)" />
-    <App3 />
   </React.StrictMode>,
   document.getElementById("root")
 );
