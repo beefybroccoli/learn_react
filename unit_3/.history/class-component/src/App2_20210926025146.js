@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 const Container = styled.div`
   border: 1px solid black;
-  margin: 10px 20% 10px 20%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 10px 20%;
   align-items: center;
   text-align: center;
+  margin-top: 10px;
 `;
 
 const Span = styled.span`
