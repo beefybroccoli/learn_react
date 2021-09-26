@@ -11,9 +11,9 @@ const Container = styled.div`
 
 export default class Item extends React.Component {
   handleOnClick = (event) => {
+    event.preventDefault();
     event.stopPropagation();
     console.log("clicked on an item");
-    console.log(event);
   };
   render() {
     const { name, purchased } = this.props;

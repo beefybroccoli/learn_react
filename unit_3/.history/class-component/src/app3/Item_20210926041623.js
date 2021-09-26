@@ -5,15 +5,15 @@ const Container = styled.div`
   border: 1px solid green;
   margin: 5px;
   padding: 5px;
-  text-decoration: ${(props) => (props.purchased ? "line-through" : "")};
-  background-color: ${(props) => (props.purchased ? "green" : "yellow")};
+  /* text-decoration: ${(props) => (props.purchased ? "line-through" : "")};
+  background-color: ${(props) => (props.purchased ? "green" : "yellow")}; */
 `;
 
 export default class Item extends React.Component {
+  handleChanges = (e) => {};
   handleOnClick = (event) => {
     event.stopPropagation();
-    console.log("clicked on an item");
-    console.log(event);
+    this.setState({purchased: !purchase}d);
   };
   render() {
     const { name, purchased } = this.props;

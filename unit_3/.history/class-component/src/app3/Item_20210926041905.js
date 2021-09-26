@@ -10,10 +10,9 @@ const Container = styled.div`
 `;
 
 export default class Item extends React.Component {
+  handleChanges = (e) => {};
   handleOnClick = (event) => {
     event.stopPropagation();
-    console.log("clicked on an item");
-    console.log(event);
   };
   render() {
     const { name, purchased } = this.props;
